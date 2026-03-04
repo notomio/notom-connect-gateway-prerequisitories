@@ -20,8 +20,10 @@ if [ -f /root/.ssh/authorized_keys ]; then
     chmod 600 /home/$USERNAME/.ssh/authorized_keys
 fi
 
-# Clone the repo
-sudo -u "$USERNAME" bash -c '
-    sudo chown $USER:$USER /opt
-    git clone https://github.com/notomio/notom-connect-gateway.git /opt/notom-connect-gateway
-'
+# Now a user was created please RECONNECT TO THE MACHINE AND LOG IN AS THE USER notom
+# you can do that from VSCODE
+# then you can run the following commands:
+
+sudo chown $USER:$USER /opt
+git clone https://github.com/notomio/notom-connect-gateway.git /opt/notom-connect-gateway
+
